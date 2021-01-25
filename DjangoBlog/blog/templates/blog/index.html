@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for post in posts %}
+    <div class="row pad">
+        <div class="col s12 m12">
+            <div class="card blue-grey lighten-1">
+                <div class="card-content white-text">
+                    <span class="card-title">
+                        <a class="light-green-text" href="{% url 'detail' post.id %}">{{post.title}}</a>
+                    </span>
+                    <p>{{post.content}}</p>
+                </div>
+                <div class="card-action white-text">
+                    <p>{{post.author}}</p>
+                    <p>{{post.pub_date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock content %}

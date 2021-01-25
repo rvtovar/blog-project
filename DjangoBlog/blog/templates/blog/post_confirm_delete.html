@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<form action="" method="post" class="card">
+    {% csrf_token %}
+    <div class="card-content">
+        <legend class="border-bottom mb-4">Delete Post</legend>
+        <h2>Are you sure you want to delete the post "{{ object.title }}"</h2>
+    </div>
+    <div class="card-action">
+        <button class="btn-small red" type="submit">Yes, Delete</button>
+        <a class="btn-small green" href="{% url 'detail' object.id %}">Cancel</a>
+    </div>
+</form>
+{% endblock content %}

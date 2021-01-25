@@ -1,0 +1,15 @@
+<nav class="nav blue-grey lighten-1">
+    <div class="nav-wrapper container">
+        <a href="{% url 'index' %}" class="brand-logo">Django Blog</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'create' %}">New Post</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

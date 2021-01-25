@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "venv/bin/python",
+    "python.venvPath": "~/Programming/Professional/dvue/QuestionTime/",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "venv/bin/flake8",
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "99",
+        "--enable-extensions",
+        "flake8_django"
+    ],
+    "python.linting.enabled": true,
+}
